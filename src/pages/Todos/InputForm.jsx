@@ -67,7 +67,7 @@ const InputForm = ({ users, setCurrentUser, onAddTodo, onDoSearch }) => {
 
       <form onSubmit={handleSubmitSearch}>
         <input type="text" value={search} onChange={handleChangeSearch} />
-        <button tytpe="submit">Search</button>
+        <button type="submit">Search</button>
       </form>
     </div>
   );
