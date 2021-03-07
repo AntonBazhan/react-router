@@ -15,6 +15,7 @@ html {
 
 .app {
   max-width: 1200px;
+  background: rgb(111, 112, 54);
   padding: 0 0.25rem;
   margin: auto;
   font-family: "Roboto", sans-serif;

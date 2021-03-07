@@ -1,17 +1,20 @@
-import { useState, useRef } from 'react';
-import { createUseStyles } from 'react-jss';
+import { useState, useRef } from "react";
+import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   inputForm: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    display: "flex",
+    justifyContent: "space-between",
+    marginBottom: "10px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
   },
 });
 
 const InputForm = ({ users, setCurrentUser, onAddTodo, onDoSearch }) => {
   const classes = useStyles();
-  const [newTodo, setNewTodo] = useState('');
-  const [search, setSearch] = useState('');
+  const [newTodo, setNewTodo] = useState("");
+  const [search, setSearch] = useState("");
   const inputRef = useRef();
 
   const handleUserChange = (e) => {
@@ -22,7 +25,7 @@ const InputForm = ({ users, setCurrentUser, onAddTodo, onDoSearch }) => {
     e.preventDefault();
 
     onAddTodo(newTodo);
-    setNewTodo('');
+    setNewTodo("");
     inputRef.current.focus();
   };
 
@@ -38,7 +41,7 @@ const InputForm = ({ users, setCurrentUser, onAddTodo, onDoSearch }) => {
     e.preventDefault();
 
     onDoSearch(search);
-    setSearch('');
+    setSearch("");
   };
 
   return (

@@ -1,14 +1,19 @@
-import { createUseStyles } from 'react-jss';
-import withTodoItem from './withTodoItem';
+import { createUseStyles } from "react-jss";
+import withTodoItem from "./withTodoItem";
 
 const useStyles = createUseStyles({
   todoItem: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "20px",
+    border: "1px solid",
 
-    '& b': {
-      backgroundColor: 'yellow',
+    "& b": {
+      backgroundColor: "red",
     },
+  },
+  btnChange: {
+    marginLeft: "10px",
   },
 });
 
@@ -25,8 +30,10 @@ const TodoItem = ({ todo, filter, onToggle }) => {
       <span dangerouslySetInnerHTML={markup} />
 
       <div>
-        {completed ? 'done' : 'in progress'}
-        <button onClick={handleToggleTodo}>x</button>
+        {completed ? "done" : "in progress"}
+        <button className={classes.btnChange} onClick={handleToggleTodo}>
+          x
+        </button>
       </div>
     </li>
   );

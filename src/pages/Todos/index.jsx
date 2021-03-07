@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
-import InputForm from './InputForm';
-import TodosList from './TodosList';
-import { ToastContainer, toast } from 'react-toastify';
-import { getUsers, getTodos, createTodo } from './todosAPI';
-import 'react-toastify/dist/ReactToastify.css';
+import { useState, useEffect } from "react";
+import InputForm from "./InputForm";
+import TodosList from "./TodosList";
+import { ToastContainer, toast } from "react-toastify";
+import { getUsers, getTodos, createTodo } from "./todosAPI";
+import "react-toastify/dist/ReactToastify.css";
 
 const Todos = () => {
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState("");
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState();
   const [todos, setTodos] = useState([]);
@@ -19,7 +19,7 @@ const Todos = () => {
         setCurrentUser(data[0]?.id);
       })
       // .then(() => toast('Users loaded', { type: 'success' }))
-      .catch((error) => toast(error.message, { type: 'error' }));
+      .catch((error) => toast(error.message, { type: "error" }));
   }, []);
 
   useEffect(() => {
@@ -29,8 +29,8 @@ const Todos = () => {
 
     getTodos(currentUser)
       .then((data) => setTodos(data))
-      .then(() => toast('Todos loaded', { type: 'success' }))
-      .catch((error) => toast(error.message, { type: 'error' }))
+      .then(() => toast("Todos loaded", { type: "success" }))
+      .catch((error) => toast(error.message, { type: "error" }))
       .finally(() => setIsLoading(false));
   }, [currentUser]);
 
@@ -43,8 +43,8 @@ const Todos = () => {
       completed: false,
     })
       .then((newTodo) => setTodos((prevState) => [newTodo, ...prevState]))
-      .then(() => toast('Todo saved', { type: 'success' }))
-      .catch((error) => toast(error.message, { type: 'error' }))
+      .then(() => toast("Todo saved", { type: "success" }))
+      .catch((error) => toast(error.message, { type: "error" }))
       .finally(() => setIsLoading(false));
   };
 
@@ -56,8 +56,8 @@ const Todos = () => {
               ...todo,
               completed: !todo.completed,
             }
-          : todo,
-      ),
+          : todo
+      )
     );
   };
 
