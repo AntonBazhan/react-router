@@ -1,9 +1,9 @@
-import { Switch, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import Retro from '../pages/Retro';
-import Todos from '../pages/Todos';
-import Weather from '../pages/Weather';
-import Page404 from '../pages/Page404';
+import { Switch, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import Retro from "../pages/Retro/App";
+import Todos from "../pages/Todos";
+import Weather from "../pages/Weather/App";
+import Page404 from "../pages/Page404";
 
 const Content = () => {
   return (

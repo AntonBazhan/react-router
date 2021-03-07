@@ -1,14 +1,15 @@
-import { createUseStyles } from 'react-jss';
-import { NavLink } from 'react-router-dom';
+import { createUseStyles } from "react-jss";
+import { NavLink } from "react-router-dom";
 
 const useStyles = createUseStyles({
   navigation: {
-    display: 'flex',
-    justifyContent: 'space-around',
+    display: "flex",
+    justifyContent: "space-around",
+    marginBottom: "20px",
 
-    '& .active': {
-      backgroundColor: 'blue',
-      color: 'white',
+    "& .active": {
+      backgroundColor: "blue",
+      color: "white",
     },
   },
 });
